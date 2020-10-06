@@ -5,6 +5,11 @@ const UserDataController = require('../controller/userDataController');
 const User = require("../models/user");
 
 
+router.get('/', (req, res, next) => {
+    res.render('index',{title: 'Ajax Home'});
+});
+
+
 /* function for displaying user details by js ajax get request */
 router.get('/js_get', UserDataController.user_js_get);
 
